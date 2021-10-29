@@ -1,6 +1,7 @@
 import logo from '../images/logo.svg';
 import React, { useEffect, useState } from 'react';
-import getLatest from '../utils/movies';
+import getLatest from '../utils/getLatest';
+import searchMovies from '../utils/searchMovies';
 import MovieIndex from './movies/movie_index.jsx';
 import './app.css';
 

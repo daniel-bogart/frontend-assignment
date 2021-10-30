@@ -1,4 +1,4 @@
-import logo from '../images/logo.svg';
+import Navbar from '../components/navbar/navbar.jsx';
 import React, { useEffect, useState } from 'react';
 import getLatest from '../utils/getLatest';
 import searchMovies from '../utils/searchMovies';
@@ -7,9 +7,11 @@ import './app.css';
 
 const App = () => {
 	const [latest, setLatest] = useState([]);
-	const [searchResult, setSearchResult] = useState([]);
+	const [searchTerm, setSearchTerm] = useState([]);
+	const indexHeader = searchTerm.length > 0 ? `Explore titles related to ${searchTerm}` : 'Most Recent Movies';
 
 	const showMovies = latest;
+	console.log(latest);
 
 	useEffect(() => {
 		getLatest().then((res) => {
@@ -19,8 +21,9 @@ const App = () => {
 
 	return (
 		<div className="app">
+			<Navbar/>
 			<div className="inner-app">
-			<MovieIndex showMovies={showMovies}/>
+			<MovieIndex indexHeader={indexHeader} showMovies={showMovies}/>
 			</div>
 		</div>
 	);

@@ -83,4 +83,4 @@ export const Header = styled.div`
   position: relative;
   left: 10%;
   margin:0 auto;
-`
+`;

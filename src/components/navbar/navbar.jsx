@@ -16,7 +16,7 @@ const Navbar = (props) => {
     <NavContainer>
       <NavWrapper>
         <Logo src={logo} alt="Timescale Logo" onClick={resetPage}/>
-        <SearchBar/>
+        <SearchBar setSearchTerm={props.setSearchTerm} setResults={props.setResults}/>
       </NavWrapper>
     </NavContainer>
   )

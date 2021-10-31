@@ -47,18 +47,16 @@
   font-style: normal;
 }
 
-.close-x:after {
+.x {
   position: relative;
   left: 28px;
   display: inline-block;
-  content: "\00d7";
-  font-size: 28px;
+  width: 30px;
   color: #141E35;
-  border: solid 1px #141E35;
   padding: 4px 10px;
 }
 
-.close-x:hover {
+.x:hover {
   cursor: pointer;
   color: lightblue;
 }

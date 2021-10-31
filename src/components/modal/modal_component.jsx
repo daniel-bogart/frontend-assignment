@@ -2,6 +2,7 @@ import React from 'react';
 import './modal.css';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
+import closeIcon from '../../images/close-icon.svg';
 
 const ModalComponent = (props) => {
 
@@ -12,7 +13,13 @@ const ModalComponent = (props) => {
       <div className="modal-child" role="dialog" aria-modal="true"> {/* Modal itself */}
         <div className="modal-top">
           <div className="modal-title">{title}</div>
-          <div className="close-x" onClick={props.toggle}></div>
+          {/* <div className="x" onClick={props.toggle}></div> */}
+          <img
+            className="x"
+            src={closeIcon}
+            onClick={props.toggle}
+            alt='\00d7'
+          />
         </div>
 
         <div className="modal-items">

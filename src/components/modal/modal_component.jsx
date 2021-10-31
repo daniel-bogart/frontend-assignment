@@ -3,11 +3,12 @@ import './modal.css';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
 import closeIcon from '../../images/close-icon.svg';
+import placeHolder from '../../images/placeholder-image.png';
 
 const ModalComponent = (props) => {
 
   const { poster_path, title, vote_average, overview, release_date, vote_count} = props.movie;
-  const poster = `https://image.tmdb.org/t/p/original/${poster_path}`;
+  const image = poster_path === null ? placeHolder : `https://image.tmdb.org/t/p/original/${poster_path}`; // displays a placeholder image if poster_path === null
   return props.showModal ? ReactDOM.createPortal ( //  using ReactDOM to render the modal since it exists outside of the DOM hierarchy
     <div className="modal-background">  {/* Grey Modal Background */}
       <div className="modal-child" role="dialog" aria-modal="true"> {/* Modal itself */}
@@ -22,7 +23,7 @@ const ModalComponent = (props) => {
         </div>
 
         <div className="modal-items">
-          <img className="modal-poster" src={poster}/>
+          <img className="modal-poster" src={image}/>
           <div className="modal-info" style={{'font-size': '18px'}}>
             <p className="release-date">
               <strong style={{'font-weight': 'bold'}}>Release date:  </strong>

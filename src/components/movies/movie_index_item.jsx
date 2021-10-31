@@ -1,6 +1,5 @@
 import React from 'react';
 import { Poster, Title, Rating } from './movie_styles';
-import './movie.css';
 import ModalComponent from '../modal/modal_component';
 import Modal from "../../utils/modal";
 

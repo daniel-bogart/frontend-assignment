@@ -24,6 +24,9 @@ export const Logo = styled.img`
   position: relative;
   right: 18%;
   margin:0 auto;
+  &:hover {
+    cursor: pointer;
+  };
 `;
 
 export const SearchWrapper = styled.div`

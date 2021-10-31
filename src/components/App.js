@@ -11,7 +11,6 @@ const App = () => {
 	const indexHeader = searchTerm.length > 0 ? `Explore titles related to '${searchTerm}'` : 'Most Recent Movies';
 	const showMovies = searchTerm.length > 0 ? results : latest; // shows the results of the search instead of the latest if any are present
 
-	console.log("RESLTS", results);
 	useEffect(() => {
 		if (searchTerm.length === 0) { // resets the page back to the default of the input field is empty
 			setResults([]);

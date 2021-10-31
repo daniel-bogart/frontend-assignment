@@ -13,7 +13,6 @@ const ModalComponent = (props) => {
       <div className="modal-child" role="dialog" aria-modal="true"> {/* Modal itself */}
         <div className="modal-top">
           <div className="modal-title">{title}</div>
-          {/* <div className="x" onClick={props.toggle}></div> */}
           <img
             className="x"
             src={closeIcon}
@@ -29,7 +28,7 @@ const ModalComponent = (props) => {
               <strong style={{'font-weight': 'bold'}}>Release date:  </strong>
               {moment(release_date).format("LL")} {/* I looked this library up after making an awkward function. This is really neat */}
             </p>
-            <p>{overview}</p>
+            <p className="modal-overview">{overview}</p>
             <p>
               <strong style={{'font-weight': 'bold'}}>{vote_average}</strong> / 10 ({vote_count} total votes)
             </p>

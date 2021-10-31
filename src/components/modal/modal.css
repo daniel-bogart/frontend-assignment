@@ -68,7 +68,6 @@
 
 .modal-info {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   width: 50%;
   padding-left: 32px;
@@ -76,4 +75,8 @@
 
 .modal-info > p {
   margin: 12px 0px;
+}
+
+.modal-overview {
+  line-height: 20px;
 }

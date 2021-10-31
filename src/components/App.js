@@ -8,7 +8,7 @@ const App = () => {
 	const [latest, setLatest] = useState([]); // storing the latest movies
 	const [results, setResults] = useState([]); // storing the searched for movies
 	const [searchTerm, setSearchTerm] = useState(''); // the result of the input field in search abr
-	const indexHeader = searchTerm.length > 0 ? `Explore titles related to ${searchTerm}` : 'Most Recent Movies';
+	const indexHeader = searchTerm.length > 0 ? `Explore titles related to '${searchTerm}'` : 'Most Recent Movies';
 	const showMovies = searchTerm.length > 0 ? results : latest; // shows the results of the search instead of the latest if any are present
 
 	console.log("RESLTS", results);

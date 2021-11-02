@@ -1,5 +1,5 @@
 import React from 'react';
-import { Poster, Title, Rating } from './movie_styles';
+import { Poster, Title, Rating, TitleWrapper } from './movie_styles';
 import ModalComponent from '../modal/modal_component';
 import Modal from "../../utils/modal";
 import placeHolder from '../../images/placeholder-image.png';
@@ -16,7 +16,9 @@ const MovieIndexItem = (props) => {
         src={image}
         alt="movie-image"
       />
-      <Title>{title}</Title>
+      <TitleWrapper>
+        <Title>{title}</Title>
+      </TitleWrapper>
       <ModalComponent toggle={toggle} showModal={showModal} movie={props.movie}></ModalComponent> {/* the toggle will trigger the modal function in util to either display or not when clicked */}
     </div>
   );

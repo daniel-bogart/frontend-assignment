@@ -17,19 +17,6 @@ export const MovieWrapper = styled.div`
   /* margin: 0 auto; */
 `;
 
-export const Poster = styled.img`
-  /* width: 300px; */
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  object-position: center;
-  transition: all .5s ease;
-  border-radius: 8px 8px 0px 0px;
-  @media (max-width: 568px) {
-    height: 100vw;
-  }
-`;
-
 export const MovieIndexList = styled.ul`
   /* position: absolute; */
   /* justify-content: center; */
@@ -45,6 +32,21 @@ export const MovieIndexList = styled.ul`
   /* column-count: 4; */
 `;
 
+export const Poster = styled.img`
+  /* width: 300px; */
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  transition: all .5s ease;
+  border-radius: 8px 8px 0px 0px;
+  @media (max-width: 568px) {
+    height: 100vw;
+  }
+  resize: vertical;
+  overflow: auto;
+`;
+
 export const MovieIndexListItem = styled.li`
   width: 100%;
   margin: 0;
@@ -57,18 +59,33 @@ export const MovieIndexListItem = styled.li`
     cursor: zoom-in;
     filter: brightness(80%);
   }
+  z-index: 1;
 `;
 
 export const Title = styled.div`
+  position: absolute;
+  bottom: 0;
+  /* width: 100%; */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-right: 20px;
   padding: 16px;
   font-weight: 500;
   font-size: 18px;
-  height: 22px;
+  background-color: white;
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+`;
+
+export const TitleWrapper = styled.div`
+  position: relative;
+  /* bottom: 0; */
+  height: 3rem;
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+  background-color: white;
+  width: 100%;
 `;
 
 export const Rating = styled.div`

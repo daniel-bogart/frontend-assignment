@@ -26,9 +26,9 @@ export const NavWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   @media (max-width: 496px) {
-    /* display: block; */
-    /* height: auto; */
-    /* padding: 1rem 0; */
+    display: block;
+    height: auto;
+    padding: 1rem 0;
   }
 `;
 
@@ -36,10 +36,11 @@ export const Logo = styled.img`
 
   &:hover {
     cursor: pointer;
-  };
+  }
+
   @media (max-width: 496px) {
-    /* margin-bottom: 1rem; */
-  };
+    margin-bottom: 1rem;
+  }
 `;
 
 export const SearchWrapper = styled.div`
@@ -69,5 +70,8 @@ export const SearchInput = styled.input`
   color: rgb(98, 98, 98);
   &:focus {
     outline: none;
+  }
+  @media (max-width: 496px) {
+    flex: 1;
   }
 `;

@@ -29,7 +29,6 @@
 
 .modal-poster {
   width: 50%;
-  /* padding-right: 2em; */
 }
 
 .modal-top {
@@ -80,3 +79,29 @@
 .modal-overview {
   line-height: 20px;
 }
+
+@media (max-width: 1015px) {
+  .modal-child {
+    width: 50%;
+  }
+
+  .modal-poster {
+    width: 100%;
+  }
+
+  .modal-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-info {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-child {
+    width: calc(100vw - 12rem)
+  }
+};

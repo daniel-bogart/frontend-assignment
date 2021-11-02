@@ -24,7 +24,7 @@ export const MovieIndexList = styled.ul`
   width: 98.8vw;
   max-width: 100vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 18.75rem));
   column-gap: 1.5em;
   row-gap: 1.5em;
   column-count: 4;

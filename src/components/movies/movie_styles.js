@@ -30,6 +30,7 @@ export const MovieIndexList = styled.ul`
   column-gap: 1.5em;
   row-gap: 1.5em;
   /* column-count: 4; */
+  margin-bottom: 14vh;
 `;
 
 export const Poster = styled.img`
@@ -63,12 +64,13 @@ export const MovieIndexListItem = styled.li`
 `;
 
 export const Title = styled.div`
+  box-sizing: border-box;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  /* width: 100%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   text-align: center;
   padding: 16px;
   font-weight: 500;
@@ -80,7 +82,6 @@ export const Title = styled.div`
 
 export const TitleWrapper = styled.div`
   position: relative;
-  /* bottom: 0; */
   height: 3rem;
   z-index: 2;
   border-radius: 0 0 8px 8px;
